@@ -6,7 +6,8 @@ on:
   push:
     branches:
       - main
-      - refs/tags/*
+    tags:
+      - '*'
 
 jobs:
   # Test the image builds and works correctly.
