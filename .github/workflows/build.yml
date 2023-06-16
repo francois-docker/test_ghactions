@@ -58,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
 #    if: contains(github.ref, "tag")
-    if: github.ref == 'refs/tag/'
+    if: github.ref == 'refs/tag/*'
 
     steps:
       - uses: actions/checkout@v2
