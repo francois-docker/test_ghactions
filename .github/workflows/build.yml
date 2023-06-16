@@ -6,7 +6,7 @@ on:
   push:
     branches:
       - main
-  tag:
+      - refs/tags/*
 
 jobs:
   # Test the image builds and works correctly.
