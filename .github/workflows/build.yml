@@ -50,5 +50,5 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ github.repository }}:latest
+          tags: francois/test_ghactions:latest
 
