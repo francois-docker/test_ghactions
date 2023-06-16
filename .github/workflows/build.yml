@@ -50,6 +50,4 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64
           push: true
-          tags: 
-            - francois/test_ghactions:latest
-            - francois/test_ghactions:${{ steps.meta.outputs.tags }}
+          tags: francois/test_ghactions:latest, francois/test_ghactions:${{ steps.meta.outputs.tags }}
