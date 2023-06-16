@@ -25,6 +25,14 @@ jobs:
 
       # TODO : test apache is running or curl message
 
+      - name: Docker metadata
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: francois/test_ghactions
+      - name: echo
+        run: echo ${{ steps.meta.outputs.tags }}
+
   # If on main branch, build and release image.
   release_latest:
     name: Release latest
