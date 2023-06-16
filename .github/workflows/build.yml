@@ -26,7 +26,7 @@ jobs:
       # TODO : test apache is running or curl message
 
   # If on main branch, build and release image.
-  release:
+  release latest:
     name: Release latest
     runs-on: ubuntu-latest
     needs: test
@@ -52,10 +52,11 @@ jobs:
           push: true
           tags: francois/test_ghactions:latest
 
+  release tags:
     name: Release tag
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'refs/tag/'
+    if: contains(github.ref, "tag")
 
     steps:
       - uses: actions/checkout@v2
